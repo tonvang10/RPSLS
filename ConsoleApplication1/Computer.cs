@@ -4,23 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace PaperScissorRockLizardSpock
 {
-        public class Myself
+        public class Computer
         {
-        string theirFirstMove;
+        string move;
         int win = 1;
         int lose = 1;
         int tie = 1;
         int game = 1;
 
-        public void PlayMe()
+        public void StartGame()
             {
                 Console.WriteLine();
                 Console.WriteLine("Paper, Scissor, Rock, Lizard, Spock. Which do you choose?");
-                theirFirstMove = Console.ReadLine().ToLower();
+                move = Console.ReadLine().ToLower();
 
-                switch (theirFirstMove)
+                switch (move)
                 {
                     case "scissor":
                         Console.WriteLine("You lose. I have  " + lose++ + ". Game " + game++);
@@ -41,7 +41,7 @@ namespace ConsoleApplication1
                         Console.WriteLine("Oops, try again");
                     break;
                 }
-            PlayMe();
+            StartGame();
 
             }
         }

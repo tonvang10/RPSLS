@@ -10,3 +10,6 @@ C:\Users\bojin\Documents\Visual Studio 2015\Projects\PaperScissorRockLizardSpock
 C:\Users\bojin\Documents\Visual Studio 2015\Projects\PaperScissorRockLizardSpock\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Users\bojin\Documents\Visual Studio 2015\Projects\PaperScissorRockLizardSpock\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\bojin\Documents\Visual Studio 2015\Projects\PaperScissorRockLizardSpock\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\bojin\Desktop\Projects\PaperScissorRockLizardSpock\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\bojin\Desktop\Projects\PaperScissorRockLizardSpock\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\bojin\Desktop\Projects\PaperScissorRockLizardSpock\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

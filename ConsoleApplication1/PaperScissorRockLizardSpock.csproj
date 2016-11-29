@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserVsUser.cs" />
-    <Compile Include="Myself.cs" />
+    <Compile Include="Players.cs" />
+    <Compile Include="Computer.cs" />
     <Compile Include="Intro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

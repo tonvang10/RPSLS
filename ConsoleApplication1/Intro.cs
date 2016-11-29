@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 
-namespace ConsoleApplication1
+namespace PaperScissorRockLizardSpock
 {
     public class Intro
     {
@@ -26,13 +26,13 @@ namespace ConsoleApplication1
             if (userInput == "you" || userInput == "against you")
             {
                 Console.WriteLine("Ok great, let's play!");
-                Myself myself = new Myself();
-                myself.PlayMe();
+                Computer computer = new Computer();
+                computer.StartGame();
             }
             if (userInput == "another player")
             {
                 Console.WriteLine("Okay.");
-                UserVsUser users = new UserVsUser();
+                Players users = new Players();
                 users.GetName();
             }
             else

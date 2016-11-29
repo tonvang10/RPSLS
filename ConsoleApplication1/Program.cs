@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace PaperScissorRockLizardSpock
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Intro Info = new Intro();
-            Info.Welcome();
-            Info.GetPlayers();
+            Intro intro = new Intro();
+            intro.Welcome();
+            intro.GetPlayers();
              
            
 
