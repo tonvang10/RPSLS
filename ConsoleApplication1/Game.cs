@@ -9,13 +9,25 @@ namespace PaperScissorRockLizardSpock
 {
     public class Game
     {
-        public string playerOne;
-        public string playerTwo;
         public string userInput;
+        public string answerToPlayAgain;
 
 
-       
-
+        public string PlayAgain()
+        {
+            Console.WriteLine("Would you like to play again?  (y|n)");
+            answerToPlayAgain = Console.ReadLine().ToLower();
+            if (answerToPlayAgain == "y")
+            {
+                Players playagain = new Players();
+                playagain.DecidePlayers();
+            }
+            if (answerToPlayAgain == "n")
+            {
+                Console.WriteLine("THANKS FOR PLAYING NICE DAY!");
+            }
+            return answerToPlayAgain;
+        }
         public void DecidePlayers()
         {
             Console.WriteLine("Do you want to play against computer or another player?");
@@ -24,13 +36,19 @@ namespace PaperScissorRockLizardSpock
             if (userInput == "computer")
             {
                 Console.WriteLine("Ok great, good luck!");
+                Players players = new Players();
+                players.GetFirstPlayerName();
                 Computer computer = new Computer();
                 computer.StartGameWithComputer();
             }
             else if (userInput == "another player")
             {
                 Console.WriteLine("Okay.");
-                
+                Players players = new Players();
+                players.GetFirstPlayerName();
+                players.GetSecondPlayerName();
+                Human humanVsHuman = new Human();
+                humanVsHuman.StartPlayerVsPlayer();
             }
             else
             {

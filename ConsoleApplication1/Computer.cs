@@ -6,36 +6,23 @@ using System.Threading.Tasks;
 
 namespace PaperScissorRockLizardSpock
 {
-        public class Computer : Game
+        public class Computer : Players
 
         {
-        string move, answerToPlayAgain;
-       
+        string move;
+        int win = 1;
         int lose = 1;
         int tie = 1;
         int game = 1;
-
-        public void PlayAgain()
-        {
-            Console.WriteLine("Would you like to play again?  (y|n)");
-            answerToPlayAgain = Console.ReadLine().ToLower();
-            if (answerToPlayAgain == "y")
-            {
-                StartGameWithComputer();
-            }
-        }
+       
         public void StartGameWithComputer()
-            {
-              
-            
+            {    
+            while (win < 3 || lose < 3)
+            {       
                 Console.WriteLine();
                 Console.WriteLine("Paper, Scissor, Rock, Lizard, Spock. Which do you choose {0}?", playerOne);
                 move = Console.ReadLine().ToLower();
-
-            int win = 1;
-            while (win > 3)
-            {
- 
+            
                 switch (move)
                 {
                     case "scissor":
@@ -56,7 +43,22 @@ namespace PaperScissorRockLizardSpock
                     default:
                         Console.WriteLine("Oops, try again");
                         break;
+                }    
+                                           
+                if (win > 3)
+                {
+                    Console.WriteLine("Good Job! You WON!");
+                    Console.WriteLine(PlayAgain());
                 }
+                else if (lose > 3)
+                {
+                    Console.WriteLine("Sorry, You Lose.");
+                }
+                else if (tie == 3)
+                {
+                    Console.WriteLine("Wow, we've tied!");;
+                }
+
             }
             }
         }

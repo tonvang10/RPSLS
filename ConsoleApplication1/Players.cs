@@ -9,11 +9,9 @@ namespace PaperScissorRockLizardSpock
 {
     public class Players : Game
     {
-        public void IntroducePlayers()
-        {
-            GetFirstPlayerName();
-            GetSecondPlayerName();
-        }
+        public string playerOne;
+        public string playerTwo;
+
         public string GetFirstPlayerName()
         {
             Console.WriteLine("What is your name?");
@@ -24,7 +22,8 @@ namespace PaperScissorRockLizardSpock
         public string GetSecondPlayerName()
         {
             Console.WriteLine("Ok, what is the other players name?");
-            playerTwo = Console.ReadLine();
+            playerTwo = Console.ReadLine();          
+            Human humanVsHuman = new Human();
             return playerTwo;
         }
 
