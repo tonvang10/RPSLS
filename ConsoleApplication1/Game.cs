@@ -9,9 +9,15 @@ namespace PaperScissorRockLizardSpock
 {
     public class Game
     {
-        public string userInput;
+
         public string answerToPlayAgain;
 
+        public void Welcome()
+        {
+            Console.WriteLine("Hi, let's play paper, scissor, rock, lizard, spock.");
+            GetRules();
+            Console.ReadLine();
+        }
 
         public string PlayAgain()
         {
@@ -28,33 +34,24 @@ namespace PaperScissorRockLizardSpock
             }
             return answerToPlayAgain;
         }
-        public void DecidePlayers()
-        {
-            Console.WriteLine("Do you want to play against computer or another player?");
-            userInput = Console.ReadLine().ToLower();
 
-            if (userInput == "computer")
-            {
-                Console.WriteLine("Ok great, good luck!");
-                Players players = new Players();
-                players.GetFirstPlayerName();
-                Computer computer = new Computer();
-                computer.StartGameWithComputer();
-            }
-            else if (userInput == "another player")
-            {
-                Console.WriteLine("Okay.");
-                Players players = new Players();
-                players.GetFirstPlayerName();
-                players.GetSecondPlayerName();
-                Human humanVsHuman = new Human();
-                humanVsHuman.StartPlayerVsPlayer();
-            }
-            else
-            {
-                Console.WriteLine("Oops, please enter COMPUTER or ANOTHER PLAYER");
-                DecidePlayers();
-            }
+        public void GetRules()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Rules for Paper, Scissor, Rock, Lizard, Spock:");
+            Console.WriteLine("Scissors cuts Paper");
+            Console.WriteLine("Paper covers Rock");
+            Console.WriteLine("Rock crushes Lizard");
+            Console.WriteLine("Lizard poisons Spock");
+            Console.WriteLine("Spock smashes Scissors");
+            Console.WriteLine("Scissors decapitates Lizard");
+            Console.WriteLine("Lizard eats Paper");
+            Console.WriteLine("Paper disproves Spock");
+            Console.WriteLine("Spock vaporizes Rock");
+            Console.WriteLine("Rock crushes Scissors");
+            Console.WriteLine();
+            Console.WriteLine("First to get 3 wins, WINS!");
+            Console.WriteLine("Press ENTER to begin");
         }
 
 

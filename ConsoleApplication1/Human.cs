@@ -8,16 +8,32 @@ namespace PaperScissorRockLizardSpock
 {
     public class Human : Players
     {
+        public string playerOne;
+        public string playerTwo;
         public string playerOneChoice;
         public string playerTwoChoice;
         int playerOneWin = 1;
         int playerTwoWin = 1;
         int tie = 1;
 
+        public string GetFirstPlayerName()
+        {
+            Console.WriteLine("What is your name?");
+            playerOne = Console.ReadLine();
+            return playerOne;
+        }
+        public string GetSecondPlayerName()
+        {
+            Console.WriteLine("Ok, what is the other players name?");
+            playerTwo = Console.ReadLine();
+            return playerTwo;
+        }
         public void StartPlayerVsPlayer()
         {
+
             while (playerOneWin < 4 || playerTwoWin < 4)
             {
+
                 Console.WriteLine("Paper, Scissor, Rock, Lizard, Spock. Which do you choose {0}?", playerOne);
                 playerOneChoice = Console.ReadLine().ToLower();
 

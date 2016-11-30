@@ -9,23 +9,38 @@ namespace PaperScissorRockLizardSpock
 {
     public class Players : Game
     {
-        public string playerOne;
-        public string playerTwo;
+        public string userInput;
 
-        public string GetFirstPlayerName()
+        public void DecidePlayers()
         {
-            Console.WriteLine("What is your name?");
-            playerOne = Console.ReadLine();
-            return playerOne;
+            Console.WriteLine("Do you want to play against computer or another player?");
+            userInput = Console.ReadLine().ToLower();
 
+            if (userInput == "computer")
+            {
+                Console.WriteLine("Ok great, good luck!");
+                Human players = new Human();
+                players.GetFirstPlayerName();
+                Computer computer = new Computer();
+                computer.StartGameWithComputer();
+            }
+            else if (userInput == "another player")
+            {
+                Console.WriteLine("Okay.");
+                Human players = new Human();
+                players.GetFirstPlayerName();
+                players.GetSecondPlayerName();
+                Human humanVsHuman = new Human();
+                humanVsHuman.StartPlayerVsPlayer();
+            }
+            else
+            {
+                Console.WriteLine("Oops, please enter COMPUTER or ANOTHER PLAYER");
+                DecidePlayers();
+            }
         }
-        public string GetSecondPlayerName()
-        {
-            Console.WriteLine("Ok, what is the other players name?");
-            playerTwo = Console.ReadLine();          
-            Human humanVsHuman = new Human();
-            return playerTwo;
-        }
+
+
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PaperScissorRockLizardSpock
 {
-        public class Computer : Players
+        public class Computer : Human
 
         {
         string move;
@@ -17,6 +17,7 @@ namespace PaperScissorRockLizardSpock
        
         public void StartGameWithComputer()
             {    
+
             while (win < 3 || lose < 3)
             {       
                 Console.WriteLine();
