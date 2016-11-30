@@ -10,36 +10,11 @@ namespace PaperScissorRockLizardSpock
 {
     public class Intro
     {
-        public string userInput, otherPlayer;
-
         public void Welcome()
         {
             Console.WriteLine("Hi, let's play paper, scissor, rock, lizard, spock.");
             GetRules();
             Console.ReadLine();
-        }
-        public void GetPlayers()
-        {
-            Console.WriteLine("Do you want to play against me or another player?");
-            userInput = Console.ReadLine().ToLower();
-
-            if (userInput == "you" || userInput == "against you")
-            {
-                Console.WriteLine("Ok great, let's play!");
-                Computer computer = new Computer();
-                computer.StartGame();
-            }
-            if (userInput == "another player")
-            {
-                Console.WriteLine("Okay.");
-                Players users = new Players();
-                users.GetName();
-            }
-            else
-            {
-                Console.WriteLine("Oops, please enter YOU or ANOTHER PLAYER");
-                GetPlayers();
-            }
         }
 
 

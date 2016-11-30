@@ -7,40 +7,26 @@ using System.Threading.Tasks;
 
 namespace PaperScissorRockLizardSpock
 {
-    public class Players
+    public class Players : Game
     {
-        string name, otherPlayer, user1Input, user2Input;
-
-        public void GetName()
+        public void IntroducePlayers()
+        {
+            GetFirstPlayerName();
+            GetSecondPlayerName();
+        }
+        public string GetFirstPlayerName()
         {
             Console.WriteLine("What is your name?");
-            string name = Console.ReadLine();
-            Console.WriteLine("Ok, what is the other players name?");
-            string otherPlayer = Console.ReadLine();
-            Console.WriteLine("Hi {0} and {1}, let's play!", name, otherPlayer);
-            playUsers();
+            playerOne = Console.ReadLine();
+            return playerOne;
+
         }
-
-
-        public void playUsers()
+        public string GetSecondPlayerName()
         {
-            Console.WriteLine();
+            Console.WriteLine("Ok, what is the other players name?");
+            playerTwo = Console.ReadLine();
+            return playerTwo;
         }
+
     }
 }
-
-//Scissors cuts Paper
-//Scissors decapitates Lizard
-
-//Rock crushes Lizard
-//Rock crushes Scissors
-
-//Lizard poisons Spock
-//Lizard eats Paper
-
-//Spock smashes Scissors
-//Spock vaporizes Rock
-
-//Paper covers Rock
-//Paper disproves Spock
-

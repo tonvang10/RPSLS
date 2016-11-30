@@ -12,7 +12,9 @@ namespace PaperScissorRockLizardSpock
         {
             Intro intro = new Intro();
             intro.Welcome();
-            intro.GetPlayers();
+
+            Players players = new Players();
+            players.DecidePlayers();
              
            
 
