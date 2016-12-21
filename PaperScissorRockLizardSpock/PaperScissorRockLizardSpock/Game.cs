@@ -17,6 +17,7 @@ namespace PaperScissorRockLizardSpock
         {
             Welcome();
             ShowRules();
+            AskTypeOfPlay();
         }
         //public bool AskPlayAgain(string answer)
         //{
@@ -31,6 +32,10 @@ namespace PaperScissorRockLizardSpock
         //    }
         //    return false;
         //}
+        public void AskTypeOfPlay()
+        {
+            Console.WriteLine("Do you want to play against another player or with computer?");
+        }
         public void ShowRules()
         {
             Console.WriteLine("\nRules for Paper, Scissor, Rock, Lizard, Spock:");
@@ -44,7 +49,7 @@ namespace PaperScissorRockLizardSpock
             Console.WriteLine("Paper disproves Spock");
             Console.WriteLine("Spock vaporizes Rock");
             Console.WriteLine("Rock crushes Scissors\n");
-            Console.WriteLine("First to get 3 wins, WINS!");
+            Console.WriteLine("First to get 3 wins, WINS!\n");
             Console.WriteLine("Press ENTER to begin");
         }
         public void Welcome()

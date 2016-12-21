@@ -8,5 +8,9 @@ namespace PaperScissorRockLizardSpock
 {
     class Human
     {
+        public Human()
+        {
+
+        }
     }
 }
