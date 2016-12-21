@@ -10,15 +10,11 @@ namespace PaperScissorRockLizardSpock
     {
         static void Main(string[] args)
         {
-            Game intro = new Game();
-            intro.Welcome();
+            Game game = new Game();
+            game.StartGame();
 
-            Players decidePlayers = new Players();
-            decidePlayers.DecidePlayers();
-             
-           
-
-            Console.ReadKey();  
+            //DELETE BEFORE TURNING IN
+            Console.ReadKey();
         }
     }
 }

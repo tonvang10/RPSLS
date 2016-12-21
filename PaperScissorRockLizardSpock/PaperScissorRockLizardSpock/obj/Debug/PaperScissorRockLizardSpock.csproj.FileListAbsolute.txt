@@ -1,0 +1,2 @@
+c:\users\bojin\documents\visual studio 2015\Projects\PaperScissorRockLizardSpock\PaperScissorRockLizardSpock\bin\Debug\PaperScissorRockLizardSpock.exe.config
+C:\Users\bojin\Desktop\RedoProjects\PaperScissorRockLizardSpock\PaperScissorRockLizardSpock\PaperScissorRockLizardSpock\bin\Debug\PaperScissorRockLizardSpock.exe.config
