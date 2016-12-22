@@ -8,21 +8,25 @@ namespace PaperScissorRockLizardSpock
 {
     class Game
     {
-        Player players;
+        List<Player> player;
+        int numberOfPlayers;
+        int players;
+        
         public Game()
         {
-            players = new Player();
+            player = new List<Player>();
         }
         public void StartGame()
         {
             Welcome();
             ShowRules();
-            AskTypeOfPlay();
+            GetNumberOfPlayers();
+            AcknowledgePlayer();
         }
-        //public bool AskPlayAgain(string answer)
+        //public bool AskPlayAgain()
         //{
         //    Console.WriteLine("Would you like to play again?  (y|n)");
-        //    answer = Console.ReadLine().ToLower();
+        //    string answer = Console.ReadLine().ToLower();
         //    if (answer == "y")
         //    {
         //    }
@@ -32,9 +36,30 @@ namespace PaperScissorRockLizardSpock
         //    }
         //    return false;
         //}
-        public void AskTypeOfPlay()
+        public void AcknowledgePlayer()
         {
-            Console.WriteLine("Do you want to play against another player or with computer?");
+            for (int i = 0; i < numberOfPlayers; i++)
+            {
+                player.Add(new Player());
+                Console.WriteLine("Player {0}, what is your name?", i + 1);
+                player[i].name = Console.ReadLine();
+            }
+        }
+        public int GetNumberOfPlayers()
+        { 
+            Console.WriteLine("How many players will be playing? (1 or 2)");
+            numberOfPlayers = Convert.ToInt32(Console.ReadLine());
+            switch (numberOfPlayers)
+            {
+                case 1:
+                case 2:
+                    break;
+                default:
+                Console.WriteLine("Please enter (1) or (2)");
+                GetNumberOfPlayers();
+                    break;
+            }
+            return numberOfPlayers;    
         }
         public void ShowRules()
         {
@@ -51,6 +76,7 @@ namespace PaperScissorRockLizardSpock
             Console.WriteLine("Rock crushes Scissors\n");
             Console.WriteLine("First to get 3 wins, WINS!\n");
             Console.WriteLine("Press ENTER to begin");
+            Console.ReadLine();
         }
         public void Welcome()
         {

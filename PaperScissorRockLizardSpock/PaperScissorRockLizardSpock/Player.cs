@@ -8,7 +8,7 @@ namespace PaperScissorRockLizardSpock
 {
     class Player
     {
-        string name;
+        public string name;
 
         public Player()
         {
